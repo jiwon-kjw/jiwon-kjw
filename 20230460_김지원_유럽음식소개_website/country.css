@@ -1,0 +1,421 @@
+/* country.css - Shared styles for country pages */
+
+/* Background */
+.country-page-body {
+    background-color: var(--bg-color);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Very faint world map background using mask */
+.country-page-body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 140vw;
+    height: 140vh;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent-purple);
+    -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    opacity: 0.03;
+    /* Extremely faint so it doesn't hurt readability */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Content Wrapper */
+.country-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Hero Section */
+.country-header {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.country-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.country-title-row h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.country-flag {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-keywords {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--text-main);
+    text-transform: uppercase;
+}
+
+.country-tags {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.tag {
+    background: #4A2E80;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.country-intro-text {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* Section Titles */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #4A2E80;
+    /* 진한 보라색 */
+    margin-bottom: 1.5rem;
+}
+
+.section-header i {
+    color: var(--accent-purple);
+}
+
+.section-header .sub-text {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+}
+
+/* Must Eat Grid */
+.must-eat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc((120% - 4.5rem) / 4));
+    justify-content: space-between;
+    row-gap: 1.5rem;
+}
+
+/* Must Eat Grid2 */
+.must-eat-grid2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+}
+
+.food-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.food-card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.food-img-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #EFEFEF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    border: 1px dashed #CCC;
+}
+
+.food-desc {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-main);
+    letter-spacing: -0.03em;
+    flex-grow: 1;
+}
+
+.food-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    border-top: 1px solid #EEE;
+    padding-top: 0.8rem;
+}
+
+.food-footer span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.food-footer i {
+    width: 14px;
+    height: 14px;
+}
+
+/* Experience & Tea Culture Grid */
+.two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.scrapbook-box {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+.scrapbook-box-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.scrapbook-box-header i {
+    color: var(--text-muted);
+}
+
+.scrapbook-box-header .sub-text {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: none;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+}
+
+.scrapbook-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.polaroid-placeholder {
+    width: 200px;
+    height: 220px;
+    background: #dcdcdc;
+    padding: 10px 10px 40px 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: rotate(-3deg);
+    position: relative;
+}
+
+.polaroid-placeholder.tilt-right {
+    transform: rotate(2deg);
+}
+
+.polaroid-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    border: 1px dashed #CCC;
+}
+
+.tape {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 80px;
+    height: 25px;
+    background: rgba(200, 180, 220, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+
+.scrapbook-text-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrapbook-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.scrapbook-desc {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+.scrapbook-desc p {
+    margin-bottom: 0.5rem;
+}
+
+.scrapbook-signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-top: auto;
+    text-align: right;
+}
+
+/* Challenge Section */
+.challenge-box {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    max-width: 800px;
+}
+
+.challenge-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.challenge-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.challenge-img-placeholder {
+    width: 250px;
+    height: 160px;
+    background-color: #EFEFEF;
+    border: 1px dashed #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+/* Antique Stamp Styles */
+.stamp-caution {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border: 4px solid #A83232;
+    padding: 0.2rem 1rem;
+    color: #A83232;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: rotate(-8deg);
+    opacity: 0.85;
+    font-family: 'Inter', sans-serif;
+    background: white;
+    filter: url(#stamp-filter);
+    /* 도장 느낌을 위한 SVG 필터 적용 */
+}
+
+.stamp-not-everyone {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 110px;
+    height: 110px;
+    border: 3px solid #A83232;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #A83232;
+    transform: rotate(10deg);
+    opacity: 0.85;
+    background: white;
+    box-shadow: inset 0 0 0 2px #A83232;
+    filter: url(#stamp-filter);
+    /* 도장 느낌을 위한 SVG 필터 적용 */
+}
+
+.stamp-not-everyone i {
+    width: 32px;
+    height: 32px;
+    margin: 2px 0;
+}

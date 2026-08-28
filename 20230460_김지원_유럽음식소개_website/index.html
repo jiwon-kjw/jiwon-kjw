@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What I Ate in Europe</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header class="top-nav">
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1 class="logo-title">What I Ate in Europe</h1>
+                <span class="logo-subtitle">Food, Drinks & Little Moments from My Trip</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#" class="nav-item active">
+                <i data-lucide="home"></i>
+                Home
+            </a>
+            <div class="nav-item-container">
+                <a href="#" class="nav-item">
+                    <i data-lucide="layout-grid"></i>
+                    Explore
+                </a>
+                <div class="dropdown-menu">
+                    <a href="austria.html">
+                        <img src="https://flagcdn.com/w80/at.png" alt="Austria Flag" class="dropdown-flag">
+                        Austria
+                    </a>
+                    <a href="czechRepublic.html">
+                        <img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic Flag" class="dropdown-flag">
+                        Czech Republic
+                    </a>
+                    <a href="hungary.html">
+                        <img src="https://flagcdn.com/w80/hu.png" alt="Hungary Flag" class="dropdown-flag">
+                        Hungary
+                    </a>
+                    <a href="uk.html">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="dropdown-flag">
+                        United Kingdom
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="header-right">
+            <img src="와인1.png" alt="Wine Illustration" class="header-image">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="hero-container">
+                <h2 class="hero-text">
+                    My food<br>
+                    adventures<br>
+                    across Europe.
+                </h2>
+                <!-- Hand-drawn underline with irregular thickness -->
+                <svg class="hand-drawn-line" viewBox="0 0 150 10" preserveAspectRatio="none">
+                    <path
+                        d="M2,5 C15,2 30,8 45,5 C60,2 75,8 90,5 C105,2 120,8 135,5 C145,2 148,5 148,5 L148,6 C148,6 145,8 135,7 C120,9 105,4 90,7 C75,9 60,4 45,7 C30,9 15,4 2,6 Z"
+                        fill="#7C5DB3" />
+                </svg>
+            </div>
+
+
+            <div class="note-box">
+                <div class="note-icon">
+                    <i data-lucide="utensils-crossed"></i>
+                </div>
+                <p class="note-text">
+                    지도의 나라를<br>
+                    클릭해보세요!
+                </p>
+                <!-- Pig-tail Decorative Arrow: Natural downward start to loop -->
+                <svg class="curly-arrow" viewBox="0 0 120 80" preserveAspectRatio="none" style="overflow: visible;">
+                    <path d="M0,40 C15,65 35,80 55,70 C75,60 75,20 55,20 C35,20 35,55 55,50 C80,45 100,30 120,10"
+                        stroke="#7C5DB3" stroke-width="2.7" fill="none" stroke-linecap="round" />
+                    <path d="M108,12 L120,10 L115,22" stroke="#7C5DB3" stroke-width="2.7" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </aside>
+
+        <section class="map-section">
+            <div id="map-container"></div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+    <script src="map.js"></script>
+</body>
+
+</html>

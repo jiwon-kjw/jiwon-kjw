@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungary</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="country.css">
+    <style>
+        .country-page-body {
+            scroll-behavior: smooth !important;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 0.6;
+            visibility: visible;
+        }
+
+        .back-to-top-btn.visible:hover {
+            opacity: 1;
+        }
+
+        .back-to-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            background: #6b4ca0;
+        }
+
+        .map-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .map-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+
+        .brand-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .brand-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="country-page-body">
+    <header class="top-nav">
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1 class="logo-title">What I Ate in Europe</h1>
+                <span class="logo-subtitle">Food, Drinks & Little Moments from My Trip</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                Home
+            </a>
+            <div class="nav-item-container">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="layout-grid"></i>
+                    Explore
+                </a>
+                <div class="dropdown-menu">
+                    <a href="austria.html">
+                        <img src="https://flagcdn.com/w80/at.png" alt="Austria Flag" class="dropdown-flag">
+                        Austria
+                    </a>
+                    <a href="czechRepublic.html">
+                        <img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic Flag" class="dropdown-flag">
+                        Czech Republic
+                    </a>
+                    <a href="hungary.html" class="active-country">
+                        <img src="https://flagcdn.com/w80/hu.png" alt="Hungary Flag" class="dropdown-flag">
+                        Hungary
+                    </a>
+                    <a href="uk.html">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="dropdown-flag">
+                        United Kingdom
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="header-right">
+            <img src="와인1.png" alt="Wine Illustration" class="header-image">
+        </div>
+    </header>
+
+    <main class="country-content">
+        <!-- Hero Section -->
+        <div class="country-header">
+            <div class="country-title-row">
+                <h1>Hungary</h1>
+                <img src="https://flagcdn.com/w80/hu.png" class="country-flag" alt="UK Flag">
+            </div>
+            <div class="country-keywords">EGER · BUDAPEST · SZENTENDRE</div>
+            <div class="country-tags">
+                <span class="tag">#FOOD</span>
+                <span class="tag">#DESSERT</span>
+                <span class="tag">#WINE</span>
+            </div>
+            <p class="country-intro-text">
+                로컬 식탁부터 와인까지, 헝가리의 진한 맛<br>
+            </p>
+        </div>
+
+        <!-- MUST EAT Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="utensils"></i> MUST EAT <span class="sub-text">이건 꼭 먹어야 해!</span>
+            </h2>
+
+            <div class="must-eat-grid">
+                <!-- 1행 -->
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Goulash</h3>
+
+                    <img src="사진자료/hg/goulash.jpg" alt="Goulash"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 파프리카 가루를 듬뿍 넣어 감자, 고기를<br>
+                        &nbsp;&nbsp;함께 끓여낸 헝가리 원조 전통 스튜<br>
+                        - 걸쭉한 체코식과 달리, 육개장처럼<br>
+                        &nbsp;&nbsp;칼칼하고 시원한 국물이 특징
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="soup"></i> 해장 메뉴로 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/i68mbJ7YC1bNg3zZ7" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Langos</h3>
+
+                    <img src="사진자료/hg/langos.jpg" alt="Langos"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 튀겨낸 납작한 빵 도우 위에 마늘 소스,<br>
+                        &nbsp;&nbsp;&nbsp;사워크림, 치즈를 얹어 먹는 헝가리식 피자<br>
+                        - 겉은 바삭하고 속은 쫄깃한 찹쌀꽈배기<br>
+                        &nbsp;&nbsp;&nbsp;느낌의 식감<br>
+                        - 주로 전통 시장이나 길거리 가판대에서<br>
+                        &nbsp;&nbsp;&nbsp;저렴하고 든든하게 사 먹는 로컬 간식
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="thumbs-up"></i> 기본 조합인<br>
+                            갈릭+사워크림+치즈<br>
+                            추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/PWVSLoTGddrQSzb19" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Stuffed Cabbage</h3>
+
+                    <img src="사진자료/hg/stuffedCabbage.jpg" alt="Stuffed Cabbage"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 다진 돼지고기, 쌀, 각종 채소를 양배추로<br>
+                        &nbsp;&nbsp;&nbsp;말아 푹 찐 헝가리식 가정식 요리<br>
+                        - 절인 양배추를 베이스로 사용해 특유의<br>
+                        &nbsp;&nbsp;&nbsp;새콤하고 개운한 맛이 감도는 것이 특징<br>
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="blend"></i> 신맛이 강할 경우<br>
+                            사워크림을 듬뿍 섞어 먹기</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/i68mbJ7YC1bNg3zZ7" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 2행 -->
+                <div class="food-card">
+                    <h3 class="food-card-title">Dobos Torte</h3>
+                    <img src="사진자료/hg/dobosTorte.jpg" alt="Dobos Torte"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+                    <div class="food-desc">
+                        - 도보스 파티시에가 황제 프란츠 요제프 1세<br>
+                        &nbsp;&nbsp;&nbsp;대관식에 맞춰 개발한 헝가리 대표 케이크<br>
+                        - 얇은 스펀지 시트와 초콜릿 버터크림을<br>
+                        &nbsp;&nbsp;&nbsp;여러 겹 쌓아 올린 구조<br>
+                        - 최상단을 단단한 캐러멜로 코팅해 바삭하고<br>
+                        &nbsp;&nbsp;&nbsp;독특한 식감을 자랑함
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="utensils-crossed"></i> 단단한 캐러멜을<br>
+                            포크로 깨뜨려<br>
+                            모든 레이어 함께 먹기</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/HS6qZNZM4Mm7DCkL6" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 카페
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <h3 class="food-card-title">Tokaji Wine</h3>
+                    <img src="사진자료/hg/tokaji.jpg" alt="Tokaji Wine"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 20%; border-radius: 8px;">
+                    <div class="food-desc">
+                        - 세계 3대 디저트 와인으로 꼽히는 헝가리<br>
+                        &nbsp;&nbsp;&nbsp;대표 와인<br>
+                        - 등급:<br>
+                        &nbsp;&nbsp;&nbsp;3~6 <span title="Puttonyos는 당도를 나타내는 단위로, 전통적으로 포도를 수확할 때 쓰던 바구니 개수에서 유래되었다"
+                            style="font-style: italic; cursor: help;">푸토뇨쉬<span
+                                style="color: #888; font-style: normal; font-size: 0.8em; vertical-align: super; margin-left: 2px;">*</span></span>로
+                        나누며, 숫자가<br>
+                        &nbsp;&nbsp;&nbsp;높을수록 더 진하고 단
+                        맛<br>
+                        - 토카이 아쑤(Aszú):<br>
+                        &nbsp;&nbsp;&nbsp;5~6단계만 진정한 귀부 와인인 '아쑤'로<br>
+                        &nbsp;&nbsp;&nbsp;인정해 표기함<br>
+                        - 토카이 에선시아(Eszencia):<br>
+                        &nbsp;&nbsp;&nbsp;가장 높은 당도로, 베이스 와인 없이 오직<br>
+                        &nbsp;&nbsp;&nbsp;귀부포도로만 만든 와인<br>
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="circle-star"></i> 5등급 아쑤 추천</span>
+                        <span><i data-lucide="snowflake"></i> 차갑게 칠링해서<br>
+                            마시는 것을 추천</span>
+                    </div>
+                </div>
+                <!-- Memo Note -->
+                <div class="food-card"
+                    style="background: #FCF7ED; border: 1px solid #EAE0CE; box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.05); transform: rotate(1.5deg); position: relative; padding: 0.8rem 1.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: left; height: 40%; align-self: flex-start; margin-top: 200px;">
+                    <!-- Masking Tape Effect -->
+                    <div
+                        style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 90px; height: 26px; background: rgba(229, 215, 193, 0.5); backdrop-filter: blur(1px); box-shadow: 0 1px 3px rgba(0,0,0,0.03); z-index: 10;">
+                    </div>
+
+                    <div
+                        style="font-family: 'Gowun Dodum', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #5C5549; font-weight: 600; word-break: keep-all; letter-spacing: -0.02em; text-align: left;">
+                        <div
+                            style="margin-bottom: 0.8rem; display: flex; align-items: left; justify-content: left; gap: 0.3rem;">
+                            <i data-lucide="lightbulb"
+                                style="width: 1.1rem; height: 1.1rem; color: #F59E0B; stroke-width: 2.5;"></i>
+                            <span
+                                style="font-weight: 800; color: #151515; font-size: 1.1rem; letter-spacing: 0.05em; font-family: 'Playfair Display', serif; line-height: 1;">TIP
+                                :</span>
+                        </div>
+                        <p>헝가리 레스토랑은 약 10~15%의<br>
+                            Service Charge가 기본 청구되는 경우가 많아 추가 팁을 따로 내지 않아도 돼요.<br>
+                            다만 이 때문에 체감 물가가 생각보다 싸지 않게
+                            느껴질 수 있어요.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="film"></i> EXPERIENCE <span class="sub-text">헝가리의 숨은 와인 아지트</span>
+            </h2>
+            <div class="two-col-grid">
+                <!-- Wine Tasting Box -->
+                <div class="scrapbook-box" style="width: 650px;">
+                    <div class="scrapbook-content">
+                        <div style="position: relative; width: 200px; height: 365px; flex-shrink: 0;">
+                            <div class="polaroid-placeholder tilt-right"
+                                style="position: absolute; top: 10px; left: 0; z-index: 1;">
+                                <div class="tape"></div>
+                                <img src="사진자료/hg/egerWine.jpg" alt="Wine"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="polaroid-placeholder"
+                                style="position: absolute; top: 230px; left: 30px; z-index: 2; width: 170px; height: 130px; padding: 8px 8px 24px 8px; transform: rotate(-8deg); box-shadow: -2px 6px 15px rgba(0,0,0,0.12); font-size: 0.8rem;">
+                                <div class="tape"></div>
+                                <img src="사진자료/hg/egerValley.jpg" alt="Wine Salon"
+                                    style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                            </div>
+                        </div>
+                        <div class="scrapbook-text-area">
+                            <h3 class="scrapbook-title">Eger Wine Village</h3>
+                            <div class="scrapbook-desc" style="flex-grow: 1;">
+                                <div style="text-align: center; margin-bottom: 0.8rem; font-weight: bold;">
+                                    부다페스트에서는 야경을, 에게르에서는 와인을!<br>
+                                    동굴 속에서 보물찾기하듯 즐기는 미식
+                                </div>
+                                - '미녀의 계곡'이라 불리는 헝가리 대표 와인 명소<br>
+                                - 수십 개의 동굴 와인숍이 원형으로 위치해<br>
+                                &nbsp;&nbsp;&nbsp;번호로 구분되는 구조<br>
+                                - 진하고 스파이시한 풍미의 레드 와인 '황소의 피'가<br>
+                                &nbsp;&nbsp;&nbsp;시그니처.<br>
+                                - 가격 착한 편이고, 글라스 단위 시음은 물론,<br>
+                                &nbsp;&nbsp;&nbsp;페트병으로 대용량 와인 저렴하게 구입 가능<br>
+
+                            </div>
+                            <div class="food-footer"
+                                style="margin-top: auto; padding-top: 0.8rem; border-top: 1px solid #EEE;">
+                                <span><i data-lucide="map-pin"></i><span
+                                        style="display: inline-block; line-height: 1.4; vertical-align: middle;">
+                                        <a href="https://maps.app.goo.gl/c9rL7WVuyvXh4P4k9" target="_blank"
+                                            class="brand-link">Location</a></span></span>
+                                <span><i data-lucide="wine"></i><span
+                                        style="display: inline-block; line-height: 1.4; vertical-align: middle;">
+                                        <a href="https://maps.app.goo.gl/8i3YXHiE42jAaG8T8" target="_blank"
+                                            class="brand-link">'황소의 피' 추천 가게</a></span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 (Memo Note) -->
+                <div class="food-card"
+                    style="background: #FCF7ED; border: 1px solid #EAE0CE; box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.05); transform: rotate(1.5deg); position: relative; padding: 0.8rem 1.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: left; height: 90%; width: 75%; margin-top: 30px; margin-left: 160px;">
+                    <!-- Masking Tape Effect -->
+                    <div
+                        style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 90px; height: 26px; background: rgba(229, 215, 193, 0.5); backdrop-filter: blur(1px); box-shadow: 0 1px 3px rgba(0,0,0,0.03); z-index: 10;">
+                    </div>
+
+                    <div
+                        style="font-family: 'Gowun Dodum', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #5C5549; font-weight: 600; word-break: keep-all; letter-spacing: -0.02em; text-align: left;">
+                        <div
+                            style="margin-bottom: 0.8rem; display: flex; align-items: left; justify-content: left; gap: 0.3rem;">
+                            <i data-lucide="lightbulb"
+                                style="width: 1.1rem; height: 1.1rem; color: #F59E0B; stroke-width: 2.5;"></i>
+                            <span
+                                style="font-weight: 800; color: #151515; font-size: 1.1rem; letter-spacing: 0.05em; font-family: 'Playfair Display', serif; line-height: 1;">TIP
+                                :</span>
+                        </div>
+                        <p>부다페스트에서 에게르 가는 법:<br>
+                            Budapest-Keleti ➔ Eger</p>
+                        <br>
+                        헝가리 철도청 공식 웹사이트 MÁV에서<br>
+                        기차표 예매 가능&nbsp;&nbsp;(
+                        <span style="display: inline-flex; align-items: center; gap: 4px; vertical-align: middle;">
+                            <i data-lucide="link"
+                                style="width: 14px; height: 14px; stroke-width: 1.5; color: inherit;"></i>
+                            <span style="display: inline-block; line-height: 1.4; vertical-align: middle;">
+                                <a href="https://www.mavcsoport.hu/en" target="_blank" class="brand-link">공식 예매
+                                    링크</a></span>)
+                        </span>
+                        <p><br>와인 마시는 일정이니 안전하게 근처에 숙소<br>
+                            잡는 것을 추천<br><br>
+                            근처에 온천들도 있으니 함께 즐기는 코스로 추천</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- SVG Filter for Stamp Effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <button id="back-to-top" class="back-to-top-btn">
+        <i data-lucide="arrow-up"></i>
+    </button>
+    <script>
+        // lucide.createIcons() renders icons, including the one in the button above
+        lucide.createIcons();
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        const scrollContainer = document.querySelector('.country-page-body');
+
+        function checkScroll(scrollTop) {
+            if (scrollTop > 100) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+
+        // Listen to body scroll
+        scrollContainer.addEventListener('scroll', (e) => {
+            checkScroll(e.target.scrollTop);
+        });
+
+        // Listen to window scroll (just in case)
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            checkScroll(scrollTop);
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            // Scroll body
+            scrollContainer.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // Scroll window (just in case)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Fallback for older browsers
+            scrollContainer.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+
+</html>

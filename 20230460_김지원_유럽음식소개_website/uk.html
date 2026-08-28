@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Kingdom</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="country.css">
+    <style>
+        .country-page-body {
+            scroll-behavior: smooth !important;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 0.6;
+            visibility: visible;
+        }
+
+        .back-to-top-btn.visible:hover {
+            opacity: 1;
+        }
+
+        .back-to-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            background: #6b4ca0;
+        }
+
+        .map-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .map-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+
+        .brand-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .brand-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="country-page-body">
+    <header class="top-nav">
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1 class="logo-title">What I Ate in Europe</h1>
+                <span class="logo-subtitle">Food, Drinks & Little Moments from My Trip</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                Home
+            </a>
+            <div class="nav-item-container">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="layout-grid"></i>
+                    Explore
+                </a>
+                <div class="dropdown-menu">
+                    <a href="austria.html">
+                        <img src="https://flagcdn.com/w80/at.png" alt="Austria Flag" class="dropdown-flag">
+                        Austria
+                    </a>
+                    <a href="czechRepublic.html">
+                        <img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic Flag" class="dropdown-flag">
+                        Czech Republic
+                    </a>
+                    <a href="hungary.html">
+                        <img src="https://flagcdn.com/w80/hu.png" alt="Hungary Flag" class="dropdown-flag">
+                        Hungary
+                    </a>
+                    <a href="uk.html" class="active-country">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="dropdown-flag">
+                        United Kingdom
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="header-right">
+            <img src="와인1.png" alt="Wine Illustration" class="header-image">
+        </div>
+    </header>
+
+    <main class="country-content">
+        <!-- Hero Section -->
+        <div class="country-header">
+            <div class="country-title-row">
+                <h1>United Kingdom</h1>
+                <img src="https://flagcdn.com/w80/gb.png" class="country-flag" alt="UK Flag">
+            </div>
+            <div class="country-keywords">LONDON · ROYAL LEAMINGTON SPA · OXFORD</div>
+            <div class="country-tags">
+                <span class="tag">#FOOD</span>
+                <span class="tag">#BEER</span>
+                <span class="tag">#WINE</span>
+                <span class="tag">#TEA</span>
+            </div>
+            <p class="country-intro-text">
+                맛없다는 편견 속 나만의 미식 보물 찾기<br>
+            </p>
+        </div>
+
+        <!-- MUST EAT Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="utensils"></i> MUST EAT <span class="sub-text">이건 꼭 먹어야 해!</span>
+            </h2>
+            <div class="must-eat-grid">
+                <!-- 1행 -->
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Fish and Chips</h3>
+                    <div style="position: relative; line-height: 0;">
+                        <a href="https://commons.wikimedia.org/wiki/File:Fish_and_chips_blackpool.jpg#/media/%ED%8C%8C%EC%9D%BC:Fish_and_chips_blackpool.jpg"
+                            target="_blank" title="Memm / CC BY-SA 4.0"
+                            style="display: block; line-height: 0; text-decoration: none;">
+                            <img src="사진자료/uk/fish_and_chips.jpg" alt="Fish and Chips"
+                                style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+                            <div
+                                style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; color: rgba(255, 255, 255, 0.7); line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.8); pointer-events: none;">
+                                ©
+                            </div>
+                        </a>
+                    </div>
+                    <div class="food-desc"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <div style="text-indent: -1em; padding-left: 1em;">- 영국의 정체성 그 자체</div>
+                        <div style="text-indent: -1em; padding-left: 1em;">- 갓 튀긴 생선튀김과 감자튀김, 레몬의 조합</div>
+                        <div style="text-indent: -1em; padding-left: 1em;">- 다만 많이 먹으면 느끼해질 수 있음</div>
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="beer"></i> 맥주 안주로 추천</span>
+                        <span><i data-lucide="users"></i> 양이 많아<br>나눠먹기 추천</span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Draught Beer</h3>
+                    <img src="사진자료/uk/beer.png" alt="Draught Beer"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+                    <div class="food-desc"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <div style="text-align: center; margin-bottom: 0.6rem;">
+                            Pub의 나라답게 1일 1맥주는 기본!
+                        </div>
+                        • Guinness: 부드럽고 묵직한 흑맥주<br>
+                        • Ale: 향과 풍미를 즐기는 영국식 맥주
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="barrel"></i> 캔 맥주X 꼭<br>생맥주로 즐기기</span>
+                        <span><i data-lucide="glass-water"></i>Half 파인트도 가능</span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Indian Food</h3>
+                    <img src="사진자료/uk/cury.jpg" alt="Indian Food"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 8px;">
+                    <div class="food-desc"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <div style="text-align: center; margin-bottom: 0.6rem;">
+                            영국은 인도계 이민자 인구가 많아<br>
+                            인도 음식 문화가 발달했으며,<br>
+                            현지 못지않은 수준의 인도 요리를<br>
+                            즐길 수 있는 곳으로 유명
+                        </div>
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="ham"></i>생선보다 고기 커리 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/Auvfo3zNE2Wnj7e46" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <!-- 2행 -->
+                <div class="food-card">
+                    <h3 class="food-card-title">Port Wine</h3>
+                    <img src="사진자료/uk/portWine.jpg" alt="Flat Iron Victoria"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+                    <div class="food-desc">
+                        - 영국과 프랑스의 갈등으로 포르투갈 와인이<br>
+                        &nbsp;&nbsp;&nbsp;대중화되며 탄생<br>
+                        - 진하고 달콤하면서도 도수가 높은<br>
+                        &nbsp;&nbsp;&nbsp;<span title="과거 장거리 운송 중 변질을 막기 위해 브랜디 등 도수 높은 증류주를 첨가해 개발된 와인"
+                            style="font-style: italic; cursor: help;">주정 강화 와인<span
+                                style="color: #888; font-style: normal; font-size: 0.8em; vertical-align: super; margin-left: 2px;">*</span></span><br>
+                        - 개봉 후에도 비교적 오래 보관 가능<br>
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="percent"></i> 약 20도 내외</span>
+                        <span><i data-lucide="cake-slice"></i> 디저트 와인으로 추천</span>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <h3 class="food-card-title">Flat Iron Victoria</h3>
+                    <img src="사진자료/uk/steak.jpg" alt="Port Wine"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 20%; border-radius: 8px;">
+                    <div class="food-desc">
+                        - 물가 비싼 런던에서 즐기기 좋은 가성비<br>
+                        &nbsp;&nbsp;&nbsp;스테이크 맛집<br>
+                        - 고소한 육즙의 스테이크와 식후 제공되는<br>
+                        &nbsp;&nbsp;&nbsp;아이스크림이 별미<br>
+                        - 뮤지컬 극장 근처라 공연 관람 전후<br>
+                        &nbsp;&nbsp;&nbsp;동선으로 추천
+                    </div>
+                    <div class="food-footer">
+                        <span><i data-lucide="wallet"></i> 스테이크 £15</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/9UU5MxTfSzsDG4mT6" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> Location
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <!-- Memo Note -->
+                <div class="food-card"
+                    style="background: #FCF7ED; border: 1px solid #EAE0CE; box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.05); transform: rotate(1.5deg); position: relative; padding: 0.8rem 1.2rem 0.8rem 1.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: left; width: 110%;; height: 55%; align-self: flex-start; margin-top: 130px; margin-left: -12px;">
+                    <!-- Masking Tape Effect -->
+                    <div
+                        style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 90px; height: 26px; background: rgba(229, 215, 193, 0.5); backdrop-filter: blur(1px); box-shadow: 0 1px 3px rgba(0,0,0,0.03); z-index: 10;">
+                    </div>
+
+                    <div
+                        style="font-family: 'Gowun Dodum', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #5C5549; font-weight: 600; word-break: keep-all; letter-spacing: -0.02em; text-align: left;">
+                        <div
+                            style="margin-bottom: 0.8rem; display: flex; align-items: left; justify-content: left; gap: 0.3rem;">
+                            <i data-lucide="lightbulb"
+                                style="width: 1.1rem; height: 1.1rem; color: #F59E0B; stroke-width: 2.5;"></i>
+                            <span
+                                style="font-weight: 800; color: #151515; font-size: 1.1rem; letter-spacing: 0.05em; font-family: 'Playfair Display', serif; line-height: 1;">TIP
+                                :</span>
+                        </div>
+                        <p>구글 지도에 레스토랑 온라인 메뉴가<br>잘 올라와 있으니 적극 활용해 보세요</p>
+                        <br>
+                        <p>영수증에 Service Charge가 자동 포함되니<br>추가 팁은 따로 내지 않아도 돼요</p>
+                        <br>
+                        <p>식사 중 기본 식수로 수돗물(Tap water)<br>무료 요청이 가능해요</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="film"></i> EXPERIENCE <span class="sub-text">직접 느껴본 영국의 문화들</span>
+            </h2>
+            <div class="two-col-grid">
+                <!-- Tea Culture Box -->
+                <div class="scrapbook-box">
+                    <div class="scrapbook-content">
+                        <div style="position: relative; width: 200px; height: 365px; flex-shrink: 0;">
+                            <div class="polaroid-placeholder tilt-right"
+                                style="position: absolute; top: 10px; left: 0; z-index: 1;">
+                                <div class="tape"></div>
+                                <img src="사진자료/uk/scon.jpg" alt="Scones"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="polaroid-placeholder"
+                                style="position: absolute; top: 230px; left: 30px; z-index: 2; width: 170px; height: 130px; padding: 8px 8px 24px 8px; transform: rotate(-8deg); box-shadow: -2px 6px 15px rgba(0,0,0,0.12); font-size: 0.8rem;">
+                                <div class="tape"></div>
+                                <img src="사진자료/uk/tea.jpg" alt="Tea"
+                                    style="width: 100%; height: 100%; object-fit: cover; object-position: center 70%;">
+                            </div>
+                        </div>
+                        <div class="scrapbook-text-area">
+                            <h3 class="scrapbook-title">Tea Culture <img src="사진자료/uk/cup일러스트.png"
+                                    alt="Tea illustration" style="height: 50px; width: auto; margin-left: 10px;"></h3>
+                            <div class="scrapbook-desc" style="flex-grow: 1;">
+                                <div style="text-align: center; margin-bottom: 0.8rem; font-weight: bold;">
+                                    언제 어디서나 하루 종일 차를<br>
+                                    달고 사는 영국인들의 일상
+                                </div>
+                                - 갓 구운 스콘에 클로티드 크림과<br>
+                                &nbsp;&nbsp;&nbsp;딸기잼을 얹은 '크림티' 체험<br>
+                                - 다양한 티 푸드가 함께 나오는<br>
+                                &nbsp;&nbsp;&nbsp;'애프터눈 티 세트'로 화려하게<br>
+                                &nbsp;&nbsp;&nbsp;즐기기 가능<br>
+                                - 티 숍에서 선물용이나 기념품으로<br>
+                                &nbsp;&nbsp;&nbsp;구매하는 것을 추천
+                            </div>
+                            <div class="food-footer"
+                                style="margin-top: auto; padding-top: 0.8rem; border-top: 1px solid #EEE;">
+                                <span><i data-lucide="coffee"></i> 추천 메뉴:<br>잉글리시<br>브렉퍼스트 티</span>
+                                <span><i data-lucide="tag"></i><span
+                                        style="display: inline-block; line-height: 1.4; vertical-align: middle;">추천
+                                        브랜드:<br><a href="https://www.fortnumandmason.com/" target="_blank"
+                                            class="brand-link">포트넘 앤 메이슨</a>,<br><a
+                                            href="https://www.whittard.co.kr/?srsltid=AfmBOooFY-krjnr3K34HPSEoY1BNslxal-8_mqLWpPMAXWsDG2UcbGxc"
+                                            target="_blank" class="brand-link">위타드</a></span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrapbook-box">
+                    <div class="scrapbook-content">
+                        <!-- Left Column: Standard Vertical Layout (Easy for manual tuning) -->
+                        <div
+                            style="display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; flex-shrink: 0;">
+                            <div class="polaroid-placeholder">
+                                <div class="tape"></div>
+                                <img src="사진자료/uk/pub.png" alt="British Pub Interior"
+                                    title="Image generated by Antigravity (Google AI)"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <!-- Pub Illustration: Left-aligned below the photo without overlaps -->
+                            <img src="사진자료/uk/pubIllustration.png" alt="Pub Food and Beer Sketch"
+                                style="width: 200px; height: auto; margin-left: 10px; margin-top: 30px;">
+                        </div>
+                        <div class="scrapbook-text-area">
+                            <h3 class="scrapbook-title">Pub Culture <img src="사진자료/uk/beer일러스트.png"
+                                    alt="Beer illustration" style="height: 50px; width: auto; margin-left: 10px;"></h3>
+                            <div class="scrapbook-desc">
+                                <div style="text-align: center; margin-bottom: 0.8rem; font-weight: bold;">
+                                    어느 동네에서나<br>
+                                    등장하는 영국의 펍
+                                </div>
+                                - 야외 스탠딩 선호로 외부가<br>
+                                &nbsp;&nbsp;&nbsp;붐벼도 실내는 비교적 한산함<br>
+                                - 술만 판매하며 카운터에서 직접<br>
+                                &nbsp;&nbsp;&nbsp;주문·픽업하는 펍도 다수<br>
+                                - 대부분 밤 10~11시쯤에 일찍<br>
+                                &nbsp;&nbsp;&nbsp;종료<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section>
+            <div style="max-width: 800px; margin: 0 auto; width: 100%; padding: 0 1rem; box-sizing: border-box;">
+                <h2 class="section-header">
+                    <i data-lucide="alert-triangle"></i> CHALLENGE <span class="sub-text">용기 있는 자만 도전하라!</span>
+                </h2>
+                <div class="challenge-box" style="margin: 0 auto;">
+                    <div class="challenge-title">
+                        Jellied Eels
+                    </div>
+                    <div class="challenge-content">
+                        <div style="position: relative; line-height: 0; display: inline-block;">
+                            <a href="https://commons.wikimedia.org/wiki/File:Eels_1385.JPG" target="_blank"
+                                title="JanesDaddy / CC BY-SA 3.0"
+                                style="display: block; line-height: 0; text-decoration: none;">
+                                <img src="사진자료/uk/jelledEels.jpg" alt="Jellied Eels"
+                                    style="width: 250px; height: 160px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);">
+                                <div
+                                    style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; color: rgba(255, 255, 255, 0.7); line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.8); pointer-events: none; z-index: 5;">
+                                    ©
+                                </div>
+                            </a>
+                        </div>
+                        <div class="scrapbook-desc">
+                            - 삶은 장어를 식혀 젤리처럼 굳혀낸 영국 요리<br>
+                            - 런던 동부 이스트엔드 지역에서 유래된 전통 음식<br>
+                            - 독특한 비주얼과 특유의 미끌거리는 식감으로 유명<br>
+                            - 현지에서도 호불호가 매우 강하게 갈리는 음식<br>
+
+                            <!-- Mini Review Box (미니 칸) -->
+                            <div
+                                style="margin-top: 0.8rem; border: 1px solid #E5E5E5; border-radius: 6px; padding: 0.5rem 0.8rem; background: #FAF9F6; font-size: 0.9rem; color: var(--text-main); text-align: left;">
+                                후기: 한 번 경험한 걸로 만족, 두 번은 없을 맛..^^
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stamp-caution">CAUTION</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SVG Filter for Stamp Effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <button id="back-to-top" class="back-to-top-btn">
+        <i data-lucide="arrow-up"></i>
+    </button>
+    <script>
+        // lucide.createIcons() renders icons, including the one in the button above
+        lucide.createIcons();
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        const scrollContainer = document.querySelector('.country-page-body');
+
+        function checkScroll(scrollTop) {
+            if (scrollTop > 100) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+
+        // Listen to body scroll
+        scrollContainer.addEventListener('scroll', (e) => {
+            checkScroll(e.target.scrollTop);
+        });
+
+        // Listen to window scroll (just in case)
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            checkScroll(scrollTop);
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            // Scroll body
+            scrollContainer.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // Scroll window (just in case)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Fallback for older browsers
+            scrollContainer.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+
+</html>

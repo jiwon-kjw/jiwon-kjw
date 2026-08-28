@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czech Republic</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="country.css">
+    <style>
+        .country-page-body {
+            scroll-behavior: smooth !important;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 0.6;
+            visibility: visible;
+        }
+
+        .back-to-top-btn.visible:hover {
+            opacity: 1;
+        }
+
+        .back-to-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            background: #6b4ca0;
+        }
+
+        .map-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .map-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+
+        .brand-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .brand-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="country-page-body">
+    <header class="top-nav">
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1 class="logo-title">What I Ate in Europe</h1>
+                <span class="logo-subtitle">Food, Drinks & Little Moments from My Trip</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                Home
+            </a>
+            <div class="nav-item-container">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="layout-grid"></i>
+                    Explore
+                </a>
+                <div class="dropdown-menu">
+                    <a href="austria.html">
+                        <img src="https://flagcdn.com/w80/at.png" alt="Austria Flag" class="dropdown-flag">
+                        Austria
+                    </a>
+                    <a href="czechRepublic.html" class="active-country">
+                        <img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic Flag" class="dropdown-flag">
+                        Czech Republic
+                    </a>
+                    <a href="hungary.html">
+                        <img src="https://flagcdn.com/w80/hu.png" alt="Hungary Flag" class="dropdown-flag">
+                        Hungary
+                    </a>
+                    <a href="uk.html">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="dropdown-flag">
+                        United Kingdom
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="header-right">
+            <img src="와인1.png" alt="Wine Illustration" class="header-image">
+        </div>
+    </header>
+
+    <main class="country-content">
+        <!-- Hero Section -->
+        <div class="country-header">
+            <div class="country-title-row">
+                <h1>Czech Republic</h1>
+                <img src="https://flagcdn.com/w80/cz.png" class="country-flag" alt="UK Flag">
+            </div>
+            <div class="country-keywords">Prague · Cesky Krumlov · Moravia</div>
+            <div class="country-tags">
+                <span class="tag">#FOOD</span>
+                <span class="tag">#DESSERT</span>
+                <span class="tag">#BEER</span>
+                <span class="tag">#WINE</span>
+            </div>
+            <p class="country-intro-text">
+                한 손에는 맥주, 다른 한 손엔 와인을<br>
+            </p>
+        </div>
+
+        <!-- MUST EAT Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="utensils"></i> MUST EAT <span class="sub-text">이건 꼭 먹어야 해!</span>
+            </h2>
+
+            <div class="must-eat-grid">
+                <!-- 1행 -->
+                <div class="food-card"
+                    style="grid-column: 1; transform: translateX(62%); display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Koleno</h3>
+                    <div style="position: relative; line-height: 0;">
+                        <a href="https://eatyourworld.com/destinations/europe/czech-republic/prague/what-to-eat/koleno/"
+                            target="_blank" title="Eat Your World / CC BY-NC-ND 4.0"
+                            style="display: block; line-height: 0; text-decoration: none;">
+                            <img src="https://eatyourworld.com/wp-content/uploads/2023/07/koleno-high-res-1024x768.jpg"
+                                alt="Koleno"
+                                style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+                            <div
+                                style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; color: rgba(255, 255, 255, 0.7); line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.8); pointer-events: none;">
+                                ©
+                            </div>
+                        </a>
+                    </div>
+                    <div class="food-desc">
+                        - 체코의 대표적인 전통 돼지 무릎 요리<br>
+                        - 한국의 족발과 유사<br>
+                        - 맥주와 향신료에 재운 고기를 오븐에<br>
+                        &nbsp;&nbsp;&nbsp;구워내 겉은 바삭하고 속은 촉촉한<br>
+                        &nbsp;&nbsp;&nbsp;육즙이 매력적임
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="beer"></i> 맥주 안주로 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/XY7di6WsfYMSZmDN6" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card"
+                    style="grid-column: 3; transform: translateX(-62%); display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Svickova</h3>
+
+                    <img src="사진자료/cz/svickova.jpg" alt="Svickova"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 부드러운 소고기 안심 요리<br>
+                        - 크림소스와 라즈베리 잼의 조합으로<br>
+                        &nbsp;&nbsp;&nbsp;달콤하면서도 고소한 맛이 특징<br>
+                        - 주로 <span title="Knedlíky는 체코식 덤플링으로 쫄깃하고 부드러운 식감이 특징"
+                            style="font-style: italic; cursor: help;">크네들리키<span
+                                style="color: #888; font-style: normal; font-size: 0.8em; vertical-align: super; margin-left: 2px;">*</span></span>
+                        와 함께 제공
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="plus-circle"></i> 양이 적어 다른 메뉴와<br>함께 주문 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/hwvPvTgJxz4aTAqL9" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 2행 -->
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Goulash</h3>
+
+                    <img src="사진자료/cz/goulash.jpg" alt="Goulash"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 소고기, 양파, 파프리카를 푹 끓여 만든<br>
+                        &nbsp;&nbsp;&nbsp;체코식 쇠고기 스튜<br>
+                        - 진하고 깊은 감칠맛이 특징<br>
+                        - 헝가리식보다는 국물이 걸쭉한 편이며<br>
+                        &nbsp;&nbsp;&nbsp;빵을 소스에 찍어 먹기 좋음
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="clock"></i> 식으면 딱딱해지니<br>바로 먹는 것을 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/jW13i8HyhM4sQSYP8" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Beef Tartare</h3>
+
+                    <img src="사진자료/cz/beefTartare.jpg" alt="Beef Tartare"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 체코식 전통 육회 요리<br>
+                        - 양념된 다진 생소고기와 생마늘, 빵이 함께<br>
+                        &nbsp;&nbsp;&nbsp;제공됨<br>
+                        - 빵에 마늘을 문지른 후 고기를 올려먹음
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="chef-hat"></i> 마늘 문지르기는<br>다다익선</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/XY7di6WsfYMSZmDN6" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Draught Beer</h3>
+
+                    <img src="사진자료/cz/beer.jpg" alt="Draft Beer"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+
+                        <div style="text-align: center; margin-bottom: 0.6rem;">
+                            1인당 연간 맥주 소비량 세계 1위!<br>
+                        </div>
+
+                        • Pilsner Urquell:<br>
+                        &nbsp;&nbsp;- 쌉싸름한 홉 향과 깔끔한 목넘김의<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;황금빛 라거 맥주<br>
+                        &nbsp;&nbsp;- 플젠에서 양조장 투어 및 시음 가능<br>
+
+                        • Kozel:<br>
+                        &nbsp;&nbsp;- 부드러운 목넘김과 풍부한 풍미가 특징<br>
+                        &nbsp;&nbsp;- Light / Dark / Mix 종류 존재<br>
+                        &nbsp;&nbsp;- 흑맥주인 Dark가 특히 유명
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="beer"></i> Kozel의 Mix 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/tgnik1n857HRBave8" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 3행 -->
+                <div class="food-card"
+                    style="grid-column: 1; transform: translateX(62%); display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Medovnik</h3>
+
+                    <img src="사진자료/cz/medovnik.jpg" alt="Medovnik"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 체코의 대표적인 전통 디저트<br>
+                        - 말렌카(Marlenka)라는 이름으로도 유명<br>
+                        - 꿀과 시트를 여러 겹 쌓아 만든 케이크로,<br>
+                        &nbsp;&nbsp;&nbsp;묵직한 단맛과 견과류의 고소함,부드러운<br>
+                        &nbsp;&nbsp;&nbsp;식감이 특징<br>
+                        - 마트에서도 포장 제품을 쉽게 구매 가능
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="coffee"></i> 커피와 함께 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/v4kryq7jNPD28hVA6" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 카페
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card"
+                    style="grid-column: 3; transform: translateX(-62%); display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Trdelnik</h3>
+
+                    <img src="사진자료/cz/trdelnik.jpg" alt="Trdelnik"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 일명 ‘굴뚝빵’으로 불리는 체코 대표 간식<br>
+                        - 설탕 등을 입혀 달콤하고 쫄깃한 식감<br>
+                        - 기본, 초코, 아이스크림 등 다양한 종류<br>
+                        - Karlova 거리 일대에 가게가 많음
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="thumbs-down"></i> 아이스크림 버전은 비추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/8Bk9g1puwriX4UXr7" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 거리
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="film"></i> EXPERIENCE <span class="sub-text">체코의 또 다른 술 문화</span>
+            </h2>
+            <div class="two-col-grid">
+                <!-- Wine Tasting Box -->
+                <div class="scrapbook-box" style="width: 650px;">
+                    <div class="scrapbook-content">
+                        <div style="position: relative; width: 200px; height: 365px; flex-shrink: 0;">
+                            <div class="polaroid-placeholder tilt-right"
+                                style="position: absolute; top: 20px; left: 0; z-index: 1;">
+                                <div class="tape"></div>
+                                <img src="사진자료/cz/wine.jpg" alt="Wine"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="polaroid-placeholder"
+                                style="position: absolute; top: 240px; left: 30px; z-index: 2; width: 170px; height: 130px; padding: 8px 8px 24px 8px; transform: rotate(-8deg); box-shadow: -2px 6px 15px rgba(0,0,0,0.12); font-size: 0.8rem;">
+                                <div class="tape"></div>
+                                <img src="사진자료/cz/wineSalon.jpg" alt="Wine Salon"
+                                    style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                            </div>
+                        </div>
+                        <div class="scrapbook-text-area">
+                            <h3 class="scrapbook-title">Wine Tasting</h3>
+                            <div class="scrapbook-desc" style="flex-grow: 1;">
+                                <div style="text-align: center; margin-bottom: 0.8rem; font-weight: bold;">
+                                    프라하가 맥주라면, 모라비아는 와인!<br>
+                                    체코의 또 다른 매력
+                                </div>
+                                - 체코 남부의 모라비아 지역은 화이트 와인으로<br>
+                                &nbsp;&nbsp;&nbsp;유명한 체코 와인의 중심지<br>
+                                - 매년 약 100여 종의 체코 대표 와인 엄선<br>
+                                - 발티체 국립 성 지하 와인 저장고에서 2시간 동안<br>
+                                &nbsp;&nbsp;&nbsp;자유롭게 시음 가능<br>
+                                - 와인과 곁들일 빵이 무료 제공되며, 마음에 드는<br>
+                                &nbsp;&nbsp;&nbsp;와인은 현장 구매 가능<br>
+                                - 시음 티켓 정가는 CZK 725, 온라인 예매 시<br>
+                                &nbsp;&nbsp;&nbsp;CZK 675로 구매 가능<br>
+                            </div>
+                            <div class="food-footer"
+                                style="margin-top: auto; padding-top: 0.8rem; border-top: 1px solid #EEE;">
+                                <span><i data-lucide="info"></i><span
+                                        style="display: inline-block; line-height: 1.4; vertical-align: middle;">
+                                        <a href="https://www.vinarskecentrum.cz/en/" target="_blank"
+                                            class="brand-link">공식 홈페이지</a></span></span>
+                                <span><i data-lucide="ticket"></i><span
+                                        style="display: inline-block; line-height: 1.4; vertical-align: middle;">
+                                        <a href="https://vstupenky.vinarskecentrum.cz/p-poukaz-do-salonu-vin-cr-volna-degustace-120-min-13721/#13721"
+                                            target="_blank" class="brand-link">시음 티켓 할인 예매</a></span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 (Memo Note) -->
+                <div class="food-card"
+                    style="background: #FCF7ED; border: 1px solid #EAE0CE; box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.05); transform: rotate(1.5deg); position: relative; padding: 0.8rem 1.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: left; height: 70%; width: 75%; margin-top: 80px; margin-left: 160px;">
+                    <!-- Masking Tape Effect -->
+                    <div
+                        style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 90px; height: 26px; background: rgba(229, 215, 193, 0.5); backdrop-filter: blur(1px); box-shadow: 0 1px 3px rgba(0,0,0,0.03); z-index: 10;">
+                    </div>
+
+                    <div
+                        style="font-family: 'Gowun Dodum', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #5C5549; font-weight: 600; word-break: keep-all; letter-spacing: -0.02em; text-align: left;">
+                        <div
+                            style="margin-bottom: 0.8rem; display: flex; align-items: left; justify-content: left; gap: 0.3rem;">
+                            <i data-lucide="lightbulb"
+                                style="width: 1.1rem; height: 1.1rem; color: #F59E0B; stroke-width: 2.5;"></i>
+                            <span
+                                style="font-weight: 800; color: #151515; font-size: 1.1rem; letter-spacing: 0.05em; font-family: 'Playfair Display', serif; line-height: 1;">TIP
+                                :</span>
+                        </div>
+                        <p>프라하에서 발티체 가는 법:<br>
+                            Praha hl.n. ➔ Břeclav (환승) ➔ Valtice město</p>
+                        <br>
+                        체코 철도청 공식 웹사이트 České dráhy에서<br>
+                        기차표 예매 가능&nbsp;&nbsp;(
+                        <span style="display: inline-flex; align-items: center; gap: 4px; vertical-align: middle;">
+                            <i data-lucide="link"
+                                style="width: 14px; height: 14px; stroke-width: 1.5; color: inherit;"></i>
+                            <span style="display: inline-block; line-height: 1.4; vertical-align: middle;">
+                                <a href="https://www.cd.cz/" target="_blank" class="brand-link">공식 예매
+                                    링크</a></span>)
+                        </span>
+                        <p><br>와인 마시는 일정이니 안전하게 근처에 숙소<br>
+                            잡는 것을 추천</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- SVG Filter for Stamp Effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <button id="back-to-top" class="back-to-top-btn">
+        <i data-lucide="arrow-up"></i>
+    </button>
+    <script>
+        // lucide.createIcons() renders icons, including the one in the button above
+        lucide.createIcons();
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        const scrollContainer = document.querySelector('.country-page-body');
+
+        function checkScroll(scrollTop) {
+            if (scrollTop > 100) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+
+        // Listen to body scroll
+        scrollContainer.addEventListener('scroll', (e) => {
+            checkScroll(e.target.scrollTop);
+        });
+
+        // Listen to window scroll (just in case)
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            checkScroll(scrollTop);
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            // Scroll body
+            scrollContainer.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // Scroll window (just in case)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Fallback for older browsers
+            scrollContainer.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+
+</html>

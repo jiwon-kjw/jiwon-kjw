@@ -1,0 +1,116 @@
+/* Wireframe-style basic layout */
+:root {
+    --bg-color: #ffffff;
+    --container-bg: #1a5f7a; /* Wireframe blue */
+    --content-bg: #f38141;   /* Wireframe orange */
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Header with 4 blocks */
+header {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.nav-block {
+    flex: 1;
+    height: 120px;
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main content area */
+main {
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    gap: 30px;
+    min-height: 500px;
+}
+
+.main-left {
+    flex: 1.2;
+    background-color: var(--content-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right-top {
+    height: 180px;
+    background-color: var(--content-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    height: 150px;
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    header {
+        flex-wrap: wrap;
+    }
+    .nav-block {
+        flex: 1 1 45%;
+    }
+}

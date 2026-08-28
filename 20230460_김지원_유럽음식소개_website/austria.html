@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austria</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="country.css">
+    <style>
+        .country-page-body {
+            scroll-behavior: smooth !important;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 0.6;
+            visibility: visible;
+        }
+
+        .back-to-top-btn.visible:hover {
+            opacity: 1;
+        }
+
+        .back-to-top-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            background: #6b4ca0;
+        }
+
+        .map-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .map-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+
+        .brand-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .brand-link:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="country-page-body">
+    <header class="top-nav">
+        <div class="logo-container">
+            <div class="logo-text">
+                <h1 class="logo-title">What I Ate in Europe</h1>
+                <span class="logo-subtitle">Food, Drinks & Little Moments from My Trip</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                Home
+            </a>
+            <div class="nav-item-container">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="layout-grid"></i>
+                    Explore
+                </a>
+                <div class="dropdown-menu">
+                    <a href="austria.html" class="active-country">
+                        <img src="https://flagcdn.com/w80/at.png" alt="Austria Flag" class="dropdown-flag">
+                        Austria
+                    </a>
+                    <a href="czechRepublic.html">
+                        <img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic Flag" class="dropdown-flag">
+                        Czech Republic
+                    </a>
+                    <a href="hungary.html">
+                        <img src="https://flagcdn.com/w80/hu.png" alt="Hungary Flag" class="dropdown-flag">
+                        Hungary
+                    </a>
+                    <a href="uk.html">
+                        <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="dropdown-flag">
+                        United Kingdom
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="header-right">
+            <img src="와인1.png" alt="Wine Illustration" class="header-image">
+        </div>
+    </header>
+
+    <main class="country-content">
+        <!-- Hero Section -->
+        <div class="country-header">
+            <div class="country-title-row">
+                <h1>Austria</h1>
+                <img src="https://flagcdn.com/w80/at.png" class="country-flag" alt="austria Flag">
+            </div>
+            <div class="country-keywords">VIENNA</div>
+            <div class="country-tags">
+                <span class="tag">#FOOD</span>
+                <span class="tag">#DESSERT</span>
+                <span class="tag">#COFFEE</span>
+            </div>
+            <p class="country-intro-text">
+                비엔나 야경도 식후경<br>
+            </p>
+        </div>
+
+        <!-- MUST EAT Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="utensils"></i> MUST EAT <span class="sub-text">이건 꼭 먹어야 해!</span>
+            </h2>
+
+            <div class="must-eat-grid">
+                <!-- 1행 -->
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Schnitzel</h3>
+
+                    <img src="사진자료/at/schnitzel.png" alt="Schnitzel"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 얇게 편 고기를 튀겨낸 오스트리아식 커틀릿<br>
+                        - 한국의 돈가스와 유사한 비주얼<br>
+                        - 바삭한 튀김옷과 촉촉한 고기의 조화가<br>
+                        &nbsp;&nbsp;&nbsp;특징<br>
+                        - 주로 감자 샐러드나 레몬과 곁들여 먹음
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="beer"></i>맥주 안주로 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/j1RGCK77RmrEtJnr5" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Tafelspitz</h3>
+
+                    <img src="사진자료/at/tafelspitz.jpg" alt="Tafelspitz"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 오스트리아의 대표적인 전통 소고기 요리<br>
+                        - 한국의 갈비탕과 유사한 담백한 국물 요리<br>
+                        - 함께 제공되는 사과 소스를 곁들이는 것이<br>
+                        &nbsp;&nbsp;&nbsp;정석<br>
+                        - 함께 나오는 골수는 빵에 발라 소금,<br>
+                        &nbsp;&nbsp;&nbsp;후추로 간을 해 먹는 것이 별미<br>
+                        - 가격대가 다소 높은 편
+
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="house-heart"></i> 가족 식사 메뉴로 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/5YxAk4ArpTXF4Q169" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="food-card" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="food-card-title">Pork Ribs</h3>
+
+                    <img src="사진자료/at/porkRibs.jpg" alt="Pork Ribs"
+                        style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;">
+
+                    <div class="food-desc">
+                        - 비엔나 여행 시 절대 놓칠 수 없는 바비큐<br>
+                        &nbsp;&nbsp;&nbsp;요리<br>
+                        - 달콤짭짤한 소스를 발라 오븐에 구워냄<br>
+                        - 겉은 바삭하고 속은 부드러운 식감과<br>
+                        &nbsp;&nbsp;&nbsp;풍부한 육즙이 특징<br>
+                        <div
+                            style="margin-top: 0.8rem; border: 1px solid #E5E5E5; border-radius: 6px; padding: 0.5rem 0.8rem; background: #FAF9F6; font-size: 0.9rem; color: var(--text-main); text-align: left;">
+                            후기: 생각보다 익숙한 맛이라 큰 기대는<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;안 하는 걸 추천
+                        </div>
+                    </div>
+
+                    <div class="food-footer">
+                        <span><i data-lucide="beer"></i>맥주 안주로 추천</span>
+                        <span>
+                            <a href="https://maps.app.goo.gl/dAKZMfdR2Z4XcQdL7" target="_blank" class="map-link">
+                                <i data-lucide="map-pin"></i> 추천 식당
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2 class="section-header">
+                <i data-lucide="film"></i> EXPERIENCE <span class="sub-text">커피향과 함께 즐기는 빈의 휴식</span>
+            </h2>
+            <div class="two-col-grid">
+                <!-- Wine Tasting Box -->
+                <div class="scrapbook-box" style="width: 730px;">
+                    <div class="scrapbook-content">
+                        <div style="position: relative; width: 200px; height: 365px; flex-shrink: 0;">
+                            <div class="polaroid-placeholder tilt-right"
+                                style="position: absolute; top: 45px; left: 0; z-index: 1;">
+                                <div class="tape"></div>
+                                <img src="사진자료/at/coffee.jpg" alt="Wine"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="polaroid-placeholder"
+                                style="position: absolute; top: 270px; left: 20px; z-index: 2; width: 170px; height: 150px; padding: 8px 8px 24px 8px; transform: rotate(-8deg); box-shadow: -2px 6px 15px rgba(0,0,0,0.12); font-size: 0.8rem;">
+                                <div class="tape"></div>
+                                <img src="사진자료/at/cake.jpg" alt="Wine Salon"
+                                    style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                            </div>
+                        </div>
+                        <div class="scrapbook-text-area">
+                            <h3 class="scrapbook-title">Cafe Culture</h3>
+                            <div class="scrapbook-desc" style="flex-grow: 1;">
+                                <div style="font-weight: bold;">
+                                    • 비엔나 커피하우스 문화
+                                </div>
+                                - 오스트리아 비엔나의 유네스코 무형문화유산<br>
+                                - 눈치 보지 않고 커피와 디저트를 여유롭게 즐기는 비엔나만의<br>
+                                &nbsp;&nbsp;&nbsp;독특한 문화<br>
+                                - 고풍스러운 인테리어와 클래식한 분위기가 특징<br>
+                                <div style="margin-top: 0.8rem; font-weight: bold;">
+                                    • 3대 카페
+                                </div>
+                                - <a href="https://maps.app.goo.gl/XuAgkFbmG7CtaLw2A" target="_blank"
+                                    class="map-link">자허(Sacher)</a>: '오리지널 자허토르테'의 원조<br>
+                                - <a href="https://maps.app.goo.gl/mgPwvdUJvaiDPGCN8" target="_blank"
+                                    class="map-link">센트럴(Central)</a>: 화려한 네오 르네상스 인테리어<br>
+                                - <a href="https://maps.app.goo.gl/uvQ1oT8j9NZDcyeh8" target="_blank"
+                                    class="map-link">데멜(Demel)</a>: 과거 왕실에 납품했던 유서 깊은 디저트 맛집<br><br>
+                            </div>
+                            <div class="food-footer"
+                                style="margin-top: auto; padding-top: 0.8rem; border-top: 1px solid #EEE; display: flex; flex-direction: column; gap: 0.5rem;">
+
+                                <div style="width: 100%; display: flex; align-items: center; gap: 0.5rem;">
+                                    <i data-lucide="cake-slice" style="flex-shrink: 0;"></i>
+                                    <span>추천 디저트: 자허토르테<br>
+                                        - 초콜릿과 살구 잼의 조합</span>
+                                </div>
+
+                                <div
+                                    style="width: 100%; display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+                                    <i data-lucide="coffee" style="flex-shrink: 0;"></i>
+                                    <span>추천 커피: 비엔나 커피<br>
+                                        - 풍성한 휘핑크림을 얹은 아인슈페너 스타일</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사진 나열 -->
+                <div class="photo-gallery"
+                    style="display: flex; flex-direction: column; align-items: center; padding: 50px 20px 60px 20px; width: 100%; margin-left: 130px;">
+
+                    <div class="photo-card"
+                        style="background: #dcdcdc; border: 1px solid #dcdcdc; box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06); transform: rotate(2deg); position: relative; padding: 10px 10px 18px 10px; width: 190px; margin-right: 90px; z-index: 1;">
+                        <div
+                            style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-2deg); width: 70px; height: 22px; background: rgba(200, 180, 220, 0.4); backdrop-filter: blur(1px); z-index: 10;">
+                        </div>
+
+                        <div
+                            style="width: 100%; height: 125px; background: #dcdcdc; overflow: hidden; margin-bottom: 8px;">
+                            <img src="사진자료/at/church.jpg" alt="St. Peter's Church"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <div class="photo-card"
+                        style="background: #dcdcdc; border: 1px solid #dcdcdc; box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06); transform: rotate(-3deg); position: relative; padding: 10px 10px 18px 10px; width: 190px; margin-left: 110px; margin-top: -25px; z-index: 2;">
+                        <div
+                            style="position: absolute; top: -11px; left: 46%; transform: translateX(-50%) rotate(3deg); width: 70px; height: 22px; background: rgba(200, 180, 220, 0.4); backdrop-filter: blur(1px); z-index: 10;">
+                        </div>
+
+                        <div
+                            style="width: 100%; height: 125px; background: #EAEAEA; overflow: hidden; margin-bottom: 8px;">
+                            <img src="사진자료/at/operaHouse.jpg" alt="Opera House"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <div class="photo-card"
+                        style="background: #dcdcdc; border: 1px solid #dcdcdc; box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06); transform: rotate(1.5deg); position: relative; padding: 10px 10px 18px 10px; width: 190px; margin-right: 40px; margin-top: -25px; z-index: 3;">
+                        <div
+                            style="position: absolute; top: -11px; left: 52%; transform: translateX(-50%) rotate(-1deg); width: 70px; height: 22px; background: rgba(200, 180, 220, 0.4); backdrop-filter: blur(1px); z-index: 10;">
+                        </div>
+
+                        <div
+                            style="width: 100%; height: 125px; background: #EAEAEA; overflow: hidden; margin-bottom: 8px;">
+                            <img src="사진자료/at/cityHall.jpg" alt="City Hall"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+    </main>
+
+    <!-- SVG Filter for Stamp Effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <button id="back-to-top" class="back-to-top-btn">
+        <i data-lucide="arrow-up"></i>
+    </button>
+    <script>
+        // lucide.createIcons() renders icons, including the one in the button above
+        lucide.createIcons();
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        const scrollContainer = document.querySelector('.country-page-body');
+
+        function checkScroll(scrollTop) {
+            if (scrollTop > 100) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+
+        // Listen to body scroll
+        scrollContainer.addEventListener('scroll', (e) => {
+            checkScroll(e.target.scrollTop);
+        });
+
+        // Listen to window scroll (just in case)
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            checkScroll(scrollTop);
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            // Scroll body
+            scrollContainer.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // Scroll window (just in case)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Fallback for older browsers
+            scrollContainer.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+
+</html>
